@@ -76,3 +76,45 @@ wage = 3000;
 satisfied = true;
 // use "console.log()" and "+" to print a sentence that includes two variables
 console.log("My name is " + name + " and I am now " + age + " years old.");
+
+// 'const' is not about IMMUTABILITY (ability to change) - it's about NO REASSIGNMENT.
+// OBJECTS can change. PRIMITIVES cannot.
+const me = {};
+// I CANNOT REASSIGN 'me'
+// me = "23";
+// I CAN reassign the VALUE of the key inside of 'me'
+me.name = "Jenny";
+
+console.log("me", me);
+
+const food = {
+  best: {
+    pizza: "margherita",
+    pasta: "lasagna"
+  },
+  worst: "anchovies"
+};
+
+console.log("food", food);
+console.log(food.best.pizza);
+
+// Error from doing 'undefined.das'
+// console.log(food.blah.das);
+
+// Cannot attach "." notation after a primitive
+// console.log(food.'number'.pizza) = number is a primitive
+
+console.log(food["best"]);
+
+// let keyINeed = "age";
+
+// console.log(me.keyINeed);
+// I must use BRACKET NOTATION if I need to use a VARIABLE for my key.
+// No quotation marks, looks for variable assigned
+// console.log(me[keyINeed]);
+// undefined, looks for a string of "keyINeed"
+// console.log(me["keyINeed"]);
+
+let favorite = "pizza";
+
+console.log(food.best[favorite]);
