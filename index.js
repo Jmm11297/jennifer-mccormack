@@ -118,3 +118,24 @@ console.log(food["best"]);
 let favorite = "pizza";
 
 console.log(food.best[favorite]);
+
+const boo = 23;
+const baa = 42;
+const buu = 23;
+
+console.log(boo === buu);
+console.log(boo == baa);
+console.log(boo > buu);
+
+// Objects are passed (compared) by reference
+// Two different 'var' are going to have two different values regardless if they look the same
+const goat = {
+  billy: "good"
+};
+const bob = {
+  billy: "good"
+};
+
+console.log(goat === bob);
+// comparing the two objects was FALSE, but comparing the nested elements looks at the VALUE of the element
+console.log(goat.billy === bob.billy);
